@@ -104,3 +104,53 @@ gsap.to(letters, {
         });
     },
 });
+
+
+// ScrollReveal animations------------//
+
+const sr = ScrollReveal({
+    duration: 2000,
+    distance: "100px",
+    delay: 400,
+    reset: false,
+});
+
+sr.reveal(".title, .about", { origin: "right" });
+sr.reveal(".home-img,.about-img", { origin: "top" });
+
+sr.reveal(
+    ".about,.title,.skill-data, .skills__title, .section-title, .projects__wrapper, .footer_profile,",
+    {
+        delay: 500,
+        interval: 100,
+    }
+);
+
+sr.reveal("sub-title., .skills-title, .section__title,", {
+    origin: "left",
+});
+
+sr.reveal(".social-icons,.btn", { origin: "right" });
+
+
+//--------- nav side menu---------/
+
+const menu = document.querySelector(".navbar ul");
+const menuBtn = document.querySelector(".fa-bars");
+const closeBtn = document.querySelector(".fa-x");
+const navLinks = document.querySelectorAll(".navbar ul li a");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+});
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+    });
+});
+
