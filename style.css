@@ -714,3 +714,48 @@ img {
     }
 
 }
+
+/*-------------Certifications----------------*/
+
+#extras {
+    padding: 4rem 5rem;
+}
+
+.extras-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.extras-box {
+    background: rgba(0, 0, 0, 0.386);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transfrom 0.3s ease;
+}
+
+.extras-box:hover {
+    transform: translateY(-10px);
+}
+
+.extras-box h2 {
+    margin-bottom: 10px;
+    color: rgb(139, 4, 249);
+    font-size: 1.5rem;
+}
+
+.extras-box ul {
+    padding-left: 20px;
+}
+
+.extras-box ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.extras-box p {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
