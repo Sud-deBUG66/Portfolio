@@ -36,11 +36,86 @@ body {
     border-radius: 10px;
 }
 
+/* ---------Main Background------------ */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 50% 15%,
+            rgba(0, 140, 255, .18) 0%,
+            rgba(8, 15, 35, .9) 35%,
+            #050816 70%);
+    overflow: hidden;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    top: -450px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle,
+            rgba(0, 183, 255, .25),
+            transparent 70%);
+    filter: blur(90px);
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white .8px, transparent .8px);
+    background-size:
+        120px 120px,
+        180px 180px;
+    background-position:
+        20px 40px,
+        80px 120px;
+    opacity: .18;
+}
+
+/*-------------Loading Animation----------------*/
+
+#loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.loading-text span {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+}
+
 /*-------------navbar----------------*/
 .bar {
     min-height: 100vh;
 }
-
 
 .navbar {
     position: fixed;
