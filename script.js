@@ -1,6 +1,5 @@
 // projects----------------//
 
-
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -67,3 +66,41 @@ function hideCard(card) {
     }, 300);
 
 }
+
+// Loading animation---------------//
+
+const letters = document.querySelectorAll(".loading-text span");
+gsap.to(letters, {
+    opacity: 1,
+    duration: 1.2,
+    stagger: 0.15,
+    onUpdate: function () {
+        letters.forEach((el, i) => {
+            gsap.to(el, {
+                color: "#ffffff",
+                duration: 0.2,
+                delay: i * 0.15,
+            });
+            gsap.to(el, {
+                color: "rgba(255,255,255,0.1)",
+                duration: 0.2,
+                delay: i * 0.15 + 0.4,
+            });
+            gsap.to(el.querySelector("::after"), {
+                opacity: 1,
+                duration: 0.2,
+                delay: i * 0.15,
+            });
+        });
+    },
+    onComplete: () => {
+        gsap.to("#loading", {
+            opacity: 0,
+            duration: 1,
+            delay: 0.5,
+            onComplete: () => {
+                document.getElementById("loading").style.display = "none";
+            },
+        });
+    },
+});
