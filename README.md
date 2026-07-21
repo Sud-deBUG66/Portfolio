@@ -69,13 +69,13 @@ cd Portfolio
 
 ## 📸 Screenshots
 
-> Add screenshots of your portfolio here.
+---
 
-Example:
+## Home page
+![Home page](assests/Portfolio-home.png)cd
 
-```
-assets/homepage.png
-```
+## Projects Section
+![Projects Section](assests/Projects.png)
 
 ---
 
