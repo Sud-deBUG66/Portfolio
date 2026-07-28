@@ -68,7 +68,6 @@ function hideCard(card) {
 }
 
 // Loading animation---------------//
-
 const letters = document.querySelectorAll(".loading-text span");
 gsap.to(letters, {
     opacity: 1,
@@ -85,11 +84,6 @@ gsap.to(letters, {
                 color: "rgba(255,255,255,0.1)",
                 duration: 0.2,
                 delay: i * 0.15 + 0.4,
-            });
-            gsap.to(el.querySelector("::after"), {
-                opacity: 1,
-                duration: 0.2,
-                delay: i * 0.15,
             });
         });
     },

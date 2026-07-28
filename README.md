@@ -72,7 +72,7 @@ cd Portfolio
 ---
 
 ## Home page
-![Home page](assests/Portfolio-home.png)cd
+![Home page](assests/Portfolio-home.png)
 
 ## Projects Section
 ![Projects Section](assests/Projects.png)
