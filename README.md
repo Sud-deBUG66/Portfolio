@@ -41,7 +41,10 @@ Portfolio/
 │── index.html
 │── style.css
 │── script.js
-│── images/
+├── assests/ 
+|   ├──images
+│   ├──screenshots
+│   ├──videos
 │── LICENSE
 └── README.md
 
@@ -72,10 +75,8 @@ cd Portfolio
 ---
 
 ## Home page
-![Home page](assests/Portfolio-home.png)
 
-## Projects Section
-![Projects Section](assests/Projects.png)
+![Home page](./assests/screenshots/portfolio%20preview.png)
 
 ---
 
